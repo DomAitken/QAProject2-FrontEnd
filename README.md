@@ -61,9 +61,9 @@ The front-end is built from HTML, CSS and JavaScript. I used the Bootstrap frame
 The HTML and CSS are used to create the look of the website, I used CSS to alter the position of h1 and h2 headers, but nothing else.
 
 ![image](https://user-images.githubusercontent.com/93253286/146449971-d163dbed-d36f-4f5d-bd58-8c5b2888272f.png)
- 
-The JS was used for the API integration using axios, thus allowing the program to communicate with the database via my Java files.
 
 ## Network Grap - Front End
 
 ![image](https://user-images.githubusercontent.com/93253286/146453543-afb85611-ca28-49ed-8f32-130345269468.png)
+
+ The JS was used for the API integration using axios, thus allowing the program to communicate with the database via my Java files.

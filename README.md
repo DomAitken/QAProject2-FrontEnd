@@ -1,54 +1,65 @@
-# Cloud Native Project - Front End
-This project is a demonstration of a working database system with a front-end website UI. The project is written in Java and SQL, and is tested with Maven. The project will also feature Github to Jira integration.
+# Cloud Native - Plant Tracker Project
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Dom Aitken
 
-### Prerequisites
-To install this project and set up a test environment you must first ensure that you have the following prerequisites:
+## Introduction:
+The brief was to create a CRUD application that encapsulated all the core modules covered during the training.
+Project Management - A fully expanded Jira board, clear documentation from a design phase. Code integrated into a Version Control System.
+Databases - A relational database to store persistent data from the project.
+Java SE & Spring Boot - Functional application created in OOP language which meets requirements of Kanban board.
+Testing - Acceptable level of test coverage on back-end (JUnit).
+Front-End Development - Functioning front-end website with API integration.
 
-Java Runtime (JRE) - I am running JRE 1.8 while building this project.
+## Planning Resources:
+Using Jira Software I created a Kanban board modelled as a Scrum and created the user stories and epics. From the user stories I created linked issues for the front and back end of my project to help the structure of the build. I created several user stories, incorporating the MoSCoW prioritisation format. An example of one is shown here:
 
-Maven (https://maven.apache.org/)
+![image](https://user-images.githubusercontent.com/93253286/146449680-10441e92-f9f6-494d-9084-cc3e8ed6392b.png)
 
-Eclipse IDE (https://www.eclipse.org/downloads/packages/release/luna/sr1/eclipse-ide-java-developers)
+Throughout the project build I adhered to only one sprint, as I decided that the timescale we were given was not long enough to justify multiple sprints.
 
-MySQL Workbench / or any DB utility you prefer. EG: NaviCat / DBeaver (I used MySQL Workbench: https://dev.mysql.com/downloads/workbench/) 
+![image](https://user-images.githubusercontent.com/93253286/146449728-dccd575d-863a-4d6d-9e92-ceda1381c47f.png)
 
-### Installing
-To set up the test environment for this project, first make sure you have all of the required prerequisites. Then open Eclipse and create a new Spring Starter Project.
+I set up two git repositories before starting - one for the front-end and one for back-end. This is the network graph from my back-end repository:
 
-There should be a folder listed in the file explorer directory called "application.properties". Open it, find and edit the details in the file to be the login for your MySQL database account. Next, locate "sql-data.sql" and run it to create the required databases.
 
-The usage of this program is to allow a user to create, edit, read, and update a databse for NFL Players by interacting with a front-end website GUI.
 
-For example if you wanted to create a player, when running the program just input the data into the prompted tables on the website. The application will add the data to the database table, where it will be stored persistently. This table can also be read from by pressing the "List All" button, updated by pressing the "Replace" button and have items deleted from it using the "delete" button.
+## Databases
+Two databases were used in this project, a local H2 database which was used for testing the back-end and a MySQL database for storing the persistent data from the application.
+H2:
+The H2 database was created with plant-schema.sql and plant-data.sql files to automatically populate the fields for testing purposes.
 
-## Running the tests
-The tests included with this system are made to automatically run the code to see if the results we give it are possible to come back with. There are not enough tests in this project to cover the whole application, but the tests that exist in the project already can cover some of the areas.
+![image](https://user-images.githubusercontent.com/93253286/146449790-cca7d545-c391-4687-9ddd-0019958a6c79.png)
 
-To run a test, you can open the class that holds the test and click "coverage as, JUnit". To run all of the tests at once, right click on the project itself at "Src/Java" and click coverage as JUnit again.
+MySQL:
 
-## Deployment
-To add this to a live system, make sure that the application properties in the application.properties folder match those that exist with your database, and update the sql-schema to include your tables.
+![image](https://user-images.githubusercontent.com/93253286/146449854-eb947a8b-b04f-465c-aab9-9d84a2a36076.png)
 
-If your tables are already existing and holding data, you may have to change a few methods in this application such as those found in the "Service" classes. The main changes will be to your SQL queries, but if your tables have different columns then this application will not be good to run on your system.
+## Back-end + Testing:
+The back-end of this project was created using Java in a Spring Boot Framework. I made sure that all of my Kanban board requirements were met with the correct mappings in my code.
 
-## Built With
-Maven (https://maven.apache.org/) - Dependency Management
+![image](https://user-images.githubusercontent.com/93253286/146449883-4cde3972-5460-4b8c-9b60-91fa131bd74d.png)
 
-## Versioning
-I used GitHub and MacOS Terminal for versioning.
+## Testing:
+I used a JUnit test structure on this project.
 
-## Authors
-Chris Perrins - Initial work - christophperrins
+![image](https://user-images.githubusercontent.com/93253286/146449911-875aa41d-0a76-4c87-8f4e-4b2f4ed70fe8.png)
 
-Dom Aitken - Updated Functionality - DomAitken (www.github.com/DomAitken)
+(Not remarkable, I know.)
 
-## License
-This project is licensed under the MIT license - see the LICENSE.md file for details.
+To make sure that the program was working, I used MockMVC to create a mocked Controller class.
 
-## Acknowledgments
-Thanks to anyone whose code was used.
+It performed mock HTTP requests like a user of the program would and allowed me to test the outcomes of each HTTP endpoint.
 
-Jordan for the help with the project.
+Unit testing: JUnit
+
+By unit testing each part of the program I could check that the individual parts are working as they should. Using Mockito I mocked the responses given by the repo so that I could test if what came out of my method matched my testing data.
+
+![image](https://user-images.githubusercontent.com/93253286/146449952-3ff06d5e-96b2-437a-8b68-624682eef56f.png)
+
+## Front-End:
+The front-end is built from HTML, CSS and JavaScript. I used the Bootstrap framework for various components, including forms, modals and toasts.
+The HTML and CSS are used to create the look of the website, I used CSS to alter the position of h1 and h2 headers, but nothing else.
+
+![image](https://user-images.githubusercontent.com/93253286/146449971-d163dbed-d36f-4f5d-bd58-8c5b2888272f.png)
+ 
+The JS was used for the API integration using axios, thus allowing the program to communicate with the database via my Java files.

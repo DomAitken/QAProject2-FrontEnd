@@ -62,4 +62,8 @@ The HTML and CSS are used to create the look of the website, I used CSS to alter
 
 ![image](https://user-images.githubusercontent.com/93253286/146449971-d163dbed-d36f-4f5d-bd58-8c5b2888272f.png)
  
+ ## Network Grap - Front End
+
+![image](https://user-images.githubusercontent.com/93253286/146453543-afb85611-ca28-49ed-8f32-130345269468.png)
+ 
 The JS was used for the API integration using axios, thus allowing the program to communicate with the database via my Java files.
